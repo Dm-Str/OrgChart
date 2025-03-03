@@ -22,12 +22,12 @@
 1. Клонируйте репозиторий:
 
    ```bash
-   git clone https://github.com/ваш_логин/ваш_репозиторий.git
+   git clone https://github.com/Dm-Str/OrgChart.git
    cd ваш_репозиторий
 
 2. Создайте виртуальное окружение и активируйте его:
    ```bash
-   python -m venv venv
+   python3.10 -m venv venv
    source venv/bin/activate  # Для Linux/Mac
    venv\Scripts\activate  # Для Windows
 
@@ -51,4 +51,4 @@
    ```bash
    python manage.py runserver
    
-14. Перейдите в браузере по адресу http://127.0.0.1:8000/
+14. Перейдите в браузере по адресу http://127.0.0.1:8000/ для просмотра структуры или http://localhost:8000/admin/ для управления записями.
