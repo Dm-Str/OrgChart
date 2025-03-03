@@ -25,3 +25,25 @@
    ```bash
    git clone https://github.com/ваш_логин/ваш_репозиторий.git
    cd ваш_репозиторий
+
+2. Создайте виртуальное окружение и активируйте его:
+   python -m venv venv
+   source venv/bin/activate  # Для Linux/Mac
+   venv\Scripts\activate  # Для Windows
+
+3. Установите зависимости:
+   pip install -r requirements.txt
+
+4. Выполните миграции:
+   python manage.py migrate
+
+5. Создайте суперпользователя для доступа к административной панели:
+   python manage.py createsuperuser
+
+6. Заполните базу данных тестовыми данными:
+   python manage.py create_sample_data
+
+7. Запустите сервер:
+   python manage.py runserver
+   
+8. Перейдите в браузере по адресу http://127.0.0.1:8000/
