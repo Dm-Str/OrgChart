@@ -1,0 +1,19 @@
+<li class="list-group-item">
+    <div class="department-header" onclick="toggle(this.nextElementSibling)">
+        <span class="caret" style="font-size: 20px"><strong>{{ department.name }}</strong></span>
+        <span class="badge badge-info">Кол-во сотрудников: {{ department.employee_set.count }}</span>
+    </div>
+    <ul class="nested">
+        {% for subdepartment in department.subdepartments.all %}
+            {% include 'department_item.html' with department=subdepartment %}
+        {% endfor %}
+        {% for employee in department.employee_set.all %}
+            <li>
+                <strong>№ {{ forloop.counter }}:</strong> {{ employee.full_name }}<br>
+                <strong>Должность:</strong> {{ employee.position }}<br>
+                <strong>Дата приема:</strong> {{ employee.hire_date|date:"d.m.Y" }}<br>
+                <strong>Зарплата:</strong> {{ employee.salary|floatformat:2 }} руб.
+            </li>
+        {% endfor %}
+    </ul>
+</li>

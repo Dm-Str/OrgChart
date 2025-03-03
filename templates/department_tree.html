@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Древовидная структура отделов</title>
+    <style>
+        .nested { display: none; }
+        .active { display: block; }
+        .department-header { display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+    </style>
+</head>
+<body>
+<div class="container" style="margin-bottom: 60px">
+    <h1 style="margin-top: 20px">Cтруктура отделов</h1>
+    <ul class="list-group">
+        {% for department in departments %}
+            {% include 'department_item.html' with department=department %}
+        {% endfor %}
+    </ul>
+</div>
+<script>
+    function toggle(element) {
+        element.classList.toggle("active");
+    }
+</script>
+</body>
+</html>
