@@ -15,7 +15,7 @@
 - Python 3.10+
 - Django 3+
 - SQLite
-- Bootstrap 4 для стилизации
+- Bootstrap для стилизации
 
 ## Установка
 
